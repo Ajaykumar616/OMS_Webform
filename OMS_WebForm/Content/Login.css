@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#form1 {
+    height: 100%;
+    width: 100%;
+}
+
+.login-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Left side - Image */
+.login-image-side {
+    flex: 1.5;
+    /* Takes up more space roughly 60% */
+    background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    /* Warehouse/Logistics image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+}
+
+.login-image-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Right side - Login Form */
+.login-form-side {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    background: transparent;
+    /* Remove shadow/border from card since it's on a clean white pane now? Or keep it subtle */
+    /* Let's make it clean flat on the white background, or subtle shadow */
+}
+
+.card-header {
+    background: transparent;
+    border: none;
+    text-align: left;
+    /* Align left for this layout usually looks better */
+    padding-left: 0;
+    padding-bottom: 2rem;
+}
+
+.card-header h3 {
+    color: #333;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-header p {
+    color: #858796;
+    margin: 0;
+}
+
+.form-control {
+    border-radius: 0.5rem;
+    /* slightly less rounded than pill for split view looks more structural */
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #e3e6f0;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    border-color: #4e73df;
+    box-shadow: none;
+}
+
+.btn-primary {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    background: #4e73df;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #2e59d9;
+}
+
+.login-footer {
+    text-align: left;
+    margin-top: 2rem;
+    color: #b7b9cc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-image-side {
+        display: none;
+        /* Hide image on mobile or make it a header */
+    }
+
+    .login-form-side {
+        flex: 1;
+    }
+}
