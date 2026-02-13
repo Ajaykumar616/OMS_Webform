@@ -129,7 +129,7 @@ namespace OMS_WebForm.Pages
             {
                 if (client == null)
                     return;
-                var response = await client.GetAsync($"api/ShippingReference/{orderId}");
+                var response = await client.GetAsync($"api/Shipping/{orderId}");
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();
