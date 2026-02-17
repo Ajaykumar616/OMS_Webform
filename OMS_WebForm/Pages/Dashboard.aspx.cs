@@ -18,7 +18,7 @@ namespace OMS_WebForm.Pages
         protected void Logout_Click(object sender, EventArgs e)
         {
             if (Request.Cookies["AuthToken"] != null)
-            {
+            { 
                 var cookie = new HttpCookie("AuthToken")
                 {
                     Expires = DateTime.Now.AddDays(-1),
